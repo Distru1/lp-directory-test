@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+</head>
+<body class="bg-gray-50 p-6 text-gray-800">
+  <div id="login-status" class="mb-4 text-center font-medium"></div>
+  <div id="admin-form" style="display:none" class="max-w-xl mx-auto bg-white p-6 rounded shadow">
+    <h2 class="text-2xl font-bold mb-4">Agregar Negocio</h2>
+    <form id="biz-form" class="space-y-4">
+      <input name="name" required class="w-full border p-2 rounded" placeholder="Nombre" />
+      <input name="category" required class="w-full border p-2 rounded" placeholder="Categoría" />
+      <input name="location" required class="w-full border p-2 rounded" placeholder="Ubicación" />
+      <input name="whatsapp" required class="w-full border p-2 rounded" placeholder="WhatsApp" />
+      <input name="instagram" class="w-full border p-2 rounded" placeholder="Instagram (opcional)" />
+      <input name="imageUrl" class="w-full border p-2 rounded" placeholder="URL de imagen (opcional)" />
+      <textarea name="description" class="w-full border p-2 rounded" placeholder="Descripción (opcional)"></textarea>
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded">Guardar</button>
+    </form>
+  </div>
+  <script src="script/firebase.js"></script>
+  <script src="script/auth.js"></script>
+  <script src="script/admin-ui.js"></script>
+</body>
+</html>
